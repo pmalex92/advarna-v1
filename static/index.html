@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADVARNA - IoT Solutions</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body class="bg-white text-[#2c3e50]">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <a href="#hero" class="flex items-center gap-2 group" data-scroll>
+            <div class="relative w-10 h-10">
+              <svg viewBox="0 0 100 100" class="w-full h-full">
+                <path
+                  d="M25 45 Q35 25 50 25 Q65 25 75 45"
+                  fill="none"
+                  stroke="#54b9ff"
+                  strokeWidth="6"
+                  strokeLinecap="round"
+                  class="transition-all duration-300 group-hover:stroke-[#2c3e50]"
+                />
+                <path
+                  d="M20 35 Q35 10 50 10 Q65 10 80 35"
+                  fill="none"
+                  stroke="#54b9ff"
+                  strokeWidth="6"
+                  strokeLinecap="round"
+                  class="transition-all duration-300 group-hover:stroke-[#2c3e50]"
+                />
+                <circle
+                  cx="50"
+                  cy="65"
+                  r="22"
+                  fill="none"
+                  stroke="#54b9ff"
+                  strokeWidth="6"
+                  class="transition-all duration-300 group-hover:stroke-[#2c3e50]"
+                />
+                <circle
+                  cx="50"
+                  cy="65"
+                  r="6"
+                  fill="#2c3e50"
+                  class="transition-all duration-300 group-hover:fill-[#54b9ff]"
+                />
+              </svg>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[#54b9ff]" data-nav-text>
+                ADVARNA
+              </span>
+              <span class="text-[10px] tracking-widest uppercase text-white/80 transition-colors duration-300" data-nav-subtext>
+                IoT Solutions
+              </span>
+            </div>
+          </a>
+
+          <div class="hidden lg:flex items-center gap-8" id="desktop-nav"></div>
+
+          <div class="hidden lg:flex items-center gap-2">
+            <button class="px-3 py-1 text-sm font-medium rounded transition-all duration-300 bg-white/20 text-white hover:bg-white/30" data-lang-button>
+              EN
+            </button>
+            <button class="px-3 py-1 text-sm font-medium rounded transition-all duration-300 text-white/70 hover:text-white hover:bg-white/10" data-lang-button>
+              FR
+            </button>
+          </div>
+
+          <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg transition-colors duration-300 text-white">
+            <span data-lucide="menu" class="w-6 h-6"></span>
+          </button>
+        </div>
+
+        <div id="mobile-menu" class="lg:hidden mt-4 py-4 border-t border-gray-200/20 hidden">
+          <div class="flex flex-col gap-4" id="mobile-nav"></div>
+          <div class="flex items-center gap-2 pt-4 border-t border-gray-200/20">
+            <button class="px-4 py-2 text-sm font-medium bg-[#54b9ff] text-white rounded">
+              EN
+            </button>
+            <button class="px-4 py-2 text-sm font-medium text-white">
+              FR
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section
+        id="hero"
+        class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#2c3e50] via-[#1a252f] to-[#0d1117]"
+      >
+        <div class="absolute inset-0 overflow-hidden">
+          <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                  <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#54b9ff" strokeWidth="0.5" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+          </div>
+          <div class="absolute inset-0" id="hero-particles"></div>
+          <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#54b9ff]/10 rounded-full blur-3xl"></div>
+          <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#ff8c42]/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="space-y-8">
+              <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                <span data-lucide="wifi" class="w-4 h-4 text-[#54b9ff]"></span>
+                <span class="text-sm text-white/80 font-medium">Wireless IoT Solutions</span>
+              </div>
+
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                Reliable, precise and <span class="text-[#54b9ff]">autonomous</span> sensors
+              </h1>
+
+              <p class="text-lg sm:text-xl text-white/70 max-w-xl leading-relaxed">
+                ADVARNA develops and manufactures wireless measurement solutions dedicated to structural and
+                geotechnical monitoring in civil engineering and industrial applications.
+              </p>
+
+              <div class="flex flex-wrap gap-4">
+                <div
+                  class="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 transition-all duration-500 hover:bg-white/10 hover:border-[#54b9ff]/30"
+                >
+                  <span data-lucide="signal" class="w-4 h-4 text-[#54b9ff]"></span>
+                  <span class="text-sm text-white/80 font-medium">SIGFOX</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 transition-all duration-500 hover:bg-white/10 hover:border-[#54b9ff]/30"
+                >
+                  <span data-lucide="radio" class="w-4 h-4 text-[#54b9ff]"></span>
+                  <span class="text-sm text-white/80 font-medium">LoRaWAN</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 transition-all duration-500 hover:bg-white/10 hover:border-[#54b9ff]/30"
+                >
+                  <span data-lucide="wifi" class="w-4 h-4 text-[#54b9ff]"></span>
+                  <span class="text-sm text-white/80 font-medium">NB-IoT</span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-4 pt-4">
+                <button
+                  id="hero-cta"
+                  class="group flex items-center gap-2 px-8 py-4 bg-[#54b9ff] text-white font-semibold rounded-lg transition-all duration-300 hover:bg-[#3aa8f5] hover:shadow-lg hover:shadow-[#54b9ff]/30 hover:-translate-y-1"
+                >
+                  Discover our products
+                  <span data-lucide="arrow-right" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></span>
+                </button>
+                <a
+                  href="#about"
+                  class="flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 transition-all duration-300 hover:bg-white/20 hover:-translate-y-1"
+                  data-scroll
+                >
+                  Learn more
+                </a>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-r from-[#54b9ff]/30 to-[#ff8c42]/20 rounded-3xl blur-3xl transform scale-110"></div>
+              <div class="relative animate-float">
+                <img
+                  src="./images/hero-sensor.jpg"
+                  alt="ADVARNA OBSESSIO X1 Sensor"
+                  class="w-full max-w-lg mx-auto rounded-2xl shadow-2xl shadow-black/50"
+                />
+
+                <div class="absolute -left-8 top-1/4 px-4 py-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 animate-pulse-glow">
+                  <div class="text-2xl font-bold text-[#54b9ff]">±1mm</div>
+                  <div class="text-xs text-white/60">Precision</div>
+                </div>
+
+                <div
+                  class="absolute -right-4 bottom-1/4 px-4 py-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 animate-pulse-glow"
+                  style="animation-delay: 1s"
+                >
+                  <div class="text-2xl font-bold text-[#ff8c42]">IP66</div>
+                  <div class="text-xs text-white/60">Protection</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+      </section>
+
+      <section id="about" class="relative py-24 lg:py-32 bg-white overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#e8f4fc]/50 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-[#54b9ff]/5 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div class="space-y-8">
+              <div>
+                <span class="inline-block px-4 py-1 bg-[#e8f4fc] text-[#54b9ff] text-sm font-semibold rounded-full mb-4">
+                  Who We Are
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2c3e50] leading-tight">
+                  ADVARNA <span class="text-[#54b9ff]">Development</span> &amp; Manufacturing
+                </h2>
+              </div>
+
+              <div class="space-y-6 text-gray-600 leading-relaxed">
+                <p class="text-lg">
+                  ADVARNA is a company specialized in the development and manufacturing of
+                  <span class="text-[#2c3e50] font-semibold"> wireless measurement solutions</span>, dedicated to
+                  structural and geotechnical monitoring in the field of civil engineering and industry.
+                </p>
+                <p>
+                  Founded in <span class="text-[#54b9ff] font-semibold">2021</span>, ADVARNA aims to meet client needs in
+                  the field of civil engineering, with the goal of becoming a reference in the coming years.
+                </p>
+                <p>
+                  ADVARNA offers several types of wireless modules that interface with different types of sensors.
+                  The communication technologies used can be
+                  <span class="font-semibold text-[#2c3e50]">SIGFOX</span>,
+                  <span class="font-semibold text-[#2c3e50]"> LoRaWAN</span>,
+                  <span class="font-semibold text-[#2c3e50]"> NB-IoT</span>, and
+                  <span class="font-semibold text-[#2c3e50]"> M2M</span>.
+                </p>
+                <p>
+                  Our proposed solutions interface with sensors using the best technologies on the market, in order
+                  to have total confidence in our measurements.
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-8 pt-6">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 bg-[#e8f4fc] rounded-xl flex items-center justify-center">
+                    <span data-lucide="target" class="w-6 h-6 text-[#54b9ff]"></span>
+                  </div>
+                  <div>
+                    <div class="text-2xl font-bold text-[#2c3e50]">2021</div>
+                    <div class="text-sm text-gray-500">Founded</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 bg-[#fff3e8] rounded-xl flex items-center justify-center">
+                    <span data-lucide="users" class="w-6 h-6 text-[#ff8c42]"></span>
+                  </div>
+                  <div>
+                    <div class="text-2xl font-bold text-[#2c3e50]">France</div>
+                    <div class="text-sm text-gray-500">Coverage</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <h3 class="text-2xl font-bold text-[#2c3e50] mb-8">Our <span class="text-[#54b9ff]">Values</span></h3>
+
+              <div class="grid sm:grid-cols-2 gap-6">
+                <div class="group relative p-6 bg-white rounded-2xl border border-gray-100 shadow-lg shadow-gray-100/50 transition-all duration-500 hover:shadow-xl hover:shadow-[#54b9ff]/10 hover:-translate-y-2 hover:border-[#54b9ff]/20">
+                  <div class="w-14 h-14 mb-4 rounded-xl bg-gradient-to-br from-[#54b9ff] to-[#2c3e50] flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                    <span data-lucide="award" class="w-7 h-7 text-white"></span>
+                  </div>
+                  <h4 class="text-lg font-bold text-[#2c3e50] mb-2 group-hover:text-[#54b9ff] transition-colors duration-300">
+                    Expertise
+                  </h4>
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Our company is led by two managers with expertise in physical measurement, sensors, networks,
+                    and instrumentation. We listen to your needs and support you in your instrumentation projects.
+                  </p>
+                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#54b9ff] to-[#ff8c42] rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <div class="group relative p-6 bg-white rounded-2xl border border-gray-100 shadow-lg shadow-gray-100/50 transition-all duration-500 hover:shadow-xl hover:shadow-[#54b9ff]/10 hover:-translate-y-2 hover:border-[#54b9ff]/20">
+                  <div class="w-14 h-14 mb-4 rounded-xl bg-gradient-to-br from-[#ff8c42] to-[#e67e22] flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                    <span data-lucide="handshake" class="w-7 h-7 text-white"></span>
+                  </div>
+                  <h4 class="text-lg font-bold text-[#2c3e50] mb-2 group-hover:text-[#54b9ff] transition-colors duration-300">
+                    Partnership of Trust
+                  </h4>
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    We are committed to supporting our clients throughout their project. From recommending the type
+                    of wireless solution to assisting with installation when needed. ADVARNA operates throughout
+                    France.
+                  </p>
+                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#54b9ff] to-[#ff8c42] rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <div class="group relative p-6 bg-white rounded-2xl border border-gray-100 shadow-lg shadow-gray-100/50 transition-all duration-500 hover:shadow-xl hover:shadow-[#54b9ff]/10 hover:-translate-y-2 hover:border-[#54b9ff]/20">
+                  <div class="w-14 h-14 mb-4 rounded-xl bg-gradient-to-br from-[#54b9ff] to-[#3aa8f5] flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                    <span data-lucide="zap" class="w-7 h-7 text-white"></span>
+                  </div>
+                  <h4 class="text-lg font-bold text-[#2c3e50] mb-2 group-hover:text-[#54b9ff] transition-colors duration-300">
+                    Reactivity
+                  </h4>
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Our company is able to adapt to any situation or problem in the fastest and most qualitative way
+                    possible. We respond quickly to your technical and commercial requests.
+                  </p>
+                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#54b9ff] to-[#ff8c42] rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <div class="group relative p-6 bg-white rounded-2xl border border-gray-100 shadow-lg shadow-gray-100/50 transition-all duration-500 hover:shadow-xl hover:shadow-[#54b9ff]/10 hover:-translate-y-2 hover:border-[#54b9ff]/20">
+                  <div class="w-14 h-14 mb-4 rounded-xl bg-gradient-to-br from-[#2c3e50] to-[#1a252f] flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                    <span data-lucide="lightbulb" class="w-7 h-7 text-white"></span>
+                  </div>
+                  <h4 class="text-lg font-bold text-[#2c3e50] mb-2 group-hover:text-[#54b9ff] transition-colors duration-300">
+                    Innovation
+                  </h4>
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Innovation is the DNA of our company. We maintain constant market surveillance to improve our
+                    products. We also listen to our clients to support them in their new wireless solution
+                    development processes.
+                  </p>
+                  <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#54b9ff] to-[#ff8c42] rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="relative py-24 lg:py-32 bg-[#f8fafc] overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent"></div>
+        <div class="absolute top-1/4 right-0 w-96 h-96 bg-[#54b9ff]/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 left-0 w-80 h-80 bg-[#ff8c42]/5 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="inline-block px-4 py-1 bg-[#e8f4fc] text-[#54b9ff] text-sm font-semibold rounded-full mb-4">
+              Our Products
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2c3e50] mb-6">
+              IoT <span class="text-[#54b9ff]">Solutions</span>
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              We offer a comprehensive range of wireless monitoring solutions for structural and geotechnical
+              applications. Our products interface with the best sensors on the market using cutting-edge
+              communication technologies.
+            </p>
+          </div>
+
+          <div class="space-y-4" id="products-list"></div>
+
+          <div class="text-center mt-12">
+            <p class="text-gray-600 mb-4">Need a custom solution for your project?</p>
+            <a
+              href="#contact"
+              data-scroll
+              class="inline-flex items-center gap-2 px-8 py-4 bg-[#2c3e50] text-white font-semibold rounded-lg transition-all duration-300 hover:bg-[#1a252f] hover:shadow-lg"
+            >
+              Contact us
+              <span data-lucide="arrow-right" class="w-5 h-5"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="advantages" class="relative py-24 lg:py-32 bg-white overflow-hidden">
+        <div class="absolute inset-0">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-32 h-32 bg-[#54b9ff]/10 rounded-full animate-pulse"></div>
+            </div>
+            <div class="absolute inset-0 animate-spin" style="animation-duration: 20s">
+              <div class="absolute w-3 h-3 bg-[#54b9ff] rounded-full" style="top: 50%; left: 90%; opacity: 0.3"></div>
+            </div>
+            <div class="absolute inset-0 animate-spin" style="animation-duration: 25s; animation-direction: reverse">
+              <div class="absolute w-3 h-3 bg-[#54b9ff] rounded-full" style="top: 10%; left: 50%; opacity: 0.45"></div>
+            </div>
+            <div class="absolute inset-0 animate-spin" style="animation-duration: 30s">
+              <div class="absolute w-3 h-3 bg-[#54b9ff] rounded-full" style="top: 50%; left: 10%; opacity: 0.6"></div>
+            </div>
+            <div class="absolute inset-0 animate-spin" style="animation-duration: 35s; animation-direction: reverse">
+              <div class="absolute w-3 h-3 bg-[#54b9ff] rounded-full" style="top: 90%; left: 50%; opacity: 0.75"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="inline-block px-4 py-1 bg-[#e8f4fc] text-[#54b9ff] text-sm font-semibold rounded-full mb-4">
+              Why Monitor
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2c3e50] mb-6">
+              The <span class="text-[#54b9ff]">Advantages</span> of Monitoring
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Structural monitoring provides significant benefits for infrastructure management, from cost savings
+              to enhanced safety and regulatory compliance.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8" id="advantages-list"></div>
+
+          <div class="mt-16 text-center">
+            <div class="inline-flex flex-col sm:flex-row items-center gap-4 p-6 bg-gradient-to-r from-[#2c3e50] to-[#1a252f] rounded-2xl">
+              <div class="text-left">
+                <p class="text-white font-semibold">Ready to start monitoring your structures?</p>
+                <p class="text-white/70 text-sm">Get in touch with our team for a personalized quote.</p>
+              </div>
+              <a
+                href="#contact"
+                data-scroll
+                class="flex items-center gap-2 px-6 py-3 bg-[#54b9ff] text-white font-semibold rounded-lg transition-all duration-300 hover:bg-[#3aa8f5] whitespace-nowrap"
+              >
+                Get a quote
+                <span data-lucide="arrow-up-right" class="w-4 h-4"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="stats"
+        class="relative py-24 lg:py-32 bg-gradient-to-br from-[#2c3e50] via-[#1a252f] to-[#0d1117] overflow-hidden"
+      >
+        <div class="absolute inset-0">
+          <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="stats-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#54b9ff" strokeWidth="0.5" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#stats-grid)" />
+            </svg>
+          </div>
+          <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#54b9ff]/10 rounded-full blur-3xl"></div>
+          <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#ff8c42]/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="inline-block px-4 py-1 bg-white/10 text-[#54b9ff] text-sm font-semibold rounded-full mb-4 border border-white/20">
+              Our Partnerships
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+              They <span class="text-[#54b9ff]">Trust</span> Us
+            </h2>
+            <p class="text-lg text-white/70 leading-relaxed">
+              ADVARNA collaborates with leading companies in civil engineering, construction, and infrastructure
+              management across France.
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="stats-grid"></div>
+
+          <div class="mt-16">
+            <p class="text-center text-white/40 text-sm mb-8">Our partners include</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 opacity-50">
+              <div class="px-6 py-3 bg-white/5 rounded-lg border border-white/10 text-white/60 text-sm font-medium">Engineering Firms</div>
+              <div class="px-6 py-3 bg-white/5 rounded-lg border border-white/10 text-white/60 text-sm font-medium">Construction Companies</div>
+              <div class="px-6 py-3 bg-white/5 rounded-lg border border-white/10 text-white/60 text-sm font-medium">Infrastructure Managers</div>
+              <div class="px-6 py-3 bg-white/5 rounded-lg border border-white/10 text-white/60 text-sm font-medium">Research Institutes</div>
+            </div>
+          </div>
+
+          <div class="mt-16 text-center">
+            <p class="text-white/60 mb-4">Interested in becoming a partner?</p>
+            <a
+              href="#contact"
+              data-scroll
+              class="inline-flex items-center gap-2 px-8 py-4 bg-[#54b9ff] text-white font-semibold rounded-lg transition-all duration-300 hover:bg-[#3aa8f5] hover:shadow-lg hover:shadow-[#54b9ff]/30"
+            >
+              <span data-lucide="handshake" class="w-5 h-5"></span>
+              Become a partner
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="relative py-24 lg:py-32 overflow-hidden">
+        <div class="absolute inset-0">
+          <img src="./images/contact-bg.jpg" alt="Construction site" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-r from-[#2c3e50]/90 via-[#2c3e50]/80 to-[#2c3e50]/70"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+            <div class="space-y-8">
+              <div>
+                <span class="inline-block px-4 py-1 bg-white/10 text-[#54b9ff] text-sm font-semibold rounded-full mb-4 border border-white/20">
+                  Contact Us
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                  Let's <span class="text-[#54b9ff]">Talk</span>
+                </h2>
+                <p class="text-lg text-white/70 leading-relaxed">
+                  Tell us what information you need and we will put you in touch with the right person to help you
+                  with your structural monitoring project.
+                </p>
+              </div>
+
+              <div class="space-y-4" id="contact-info"></div>
+
+              <div class="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+                <h4 class="text-white font-semibold mb-3">Working Hours</h4>
+                <div class="space-y-2 text-sm">
+                  <div class="flex justify-between text-white/70">
+                    <span>Monday - Friday</span>
+                    <span>9:00 AM - 6:00 PM</span>
+                  </div>
+                  <div class="flex justify-between text-white/50">
+                    <span>Saturday - Sunday</span>
+                    <span>Closed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <form id="contact-form" class="p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                <h3 class="text-xl font-bold text-white mb-6">Send us a message</h3>
+
+                <div class="space-y-5">
+                  <div class="grid sm:grid-cols-2 gap-5">
+                    <div class="space-y-2">
+                      <label for="name" class="text-white/80">Name <span class="text-[#ff8c42]">*</span></label>
+                      <input
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="Your name"
+                        class="w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-white placeholder:text-white/40 focus:border-[#54b9ff] focus:outline-none"
+                      />
+                    </div>
+                    <div class="space-y-2">
+                      <label for="company" class="text-white/80">Company <span class="text-[#ff8c42]">*</span></label>
+                      <input
+                        id="company"
+                        name="company"
+                        required
+                        placeholder="Your company"
+                        class="w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-white placeholder:text-white/40 focus:border-[#54b9ff] focus:outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="grid sm:grid-cols-2 gap-5">
+                    <div class="space-y-2">
+                      <label for="email" class="text-white/80">Email <span class="text-[#ff8c42]">*</span></label>
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        placeholder="your@email.com"
+                        class="w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-white placeholder:text-white/40 focus:border-[#54b9ff] focus:outline-none"
+                      />
+                    </div>
+                    <div class="space-y-2">
+                      <label for="phone" class="text-white/80">Phone</label>
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        placeholder="+33 1 23 45 67 89"
+                        class="w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-white placeholder:text-white/40 focus:border-[#54b9ff] focus:outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="space-y-2">
+                    <label for="subject" class="text-white/80">Subject <span class="text-[#ff8c42]">*</span></label>
+                    <input
+                      id="subject"
+                      name="subject"
+                      required
+                      placeholder="What is your inquiry about?"
+                      class="w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-white placeholder:text-white/40 focus:border-[#54b9ff] focus:outline-none"
+                    />
+                  </div>
+
+                  <div class="space-y-2">
+                    <label for="message" class="text-white/80">Message <span class="text-[#ff8c42]">*</span></label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      required
+                      placeholder="Tell us about your project..."
+                      class="w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-white placeholder:text-white/40 focus:border-[#54b9ff] focus:outline-none resize-none"
+                    ></textarea>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <input id="privacy" name="privacy" type="checkbox" class="mt-1 h-4 w-4 accent-[#54b9ff]" />
+                    <label for="privacy" class="text-sm text-white/60 leading-relaxed cursor-pointer">
+                      I agree that my data will be used to be contacted by ADVARNA in accordance with the privacy
+                      policy of this site. <span class="text-[#ff8c42]">*</span>
+                    </label>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="w-full py-4 bg-[#54b9ff] text-white font-semibold rounded-lg transition-all duration-300 hover:bg-[#3aa8f5] disabled:opacity-50 disabled:cursor-not-allowed"
+                    id="contact-submit"
+                  >
+                    <span class="inline-flex items-center gap-2" id="contact-submit-text">
+                      <span data-lucide="send" class="w-5 h-5"></span>
+                      Send Message
+                    </span>
+                  </button>
+                </div>
+              </form>
+              <div id="contact-success" class="hidden text-center">
+                <div class="p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                  <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-green-500/20">
+                    <span data-lucide="check-circle" class="w-10 h-10 text-green-400"></span>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white mb-4">Message Sent!</h3>
+                  <p class="text-white/70 mb-6">
+                    Thank you for contacting us. We will get back to you as soon as possible.
+                  </p>
+                  <button
+                    type="button"
+                    id="contact-reset"
+                    class="px-6 py-3 bg-[#54b9ff] text-white font-semibold rounded-lg transition-all duration-300 hover:bg-[#3aa8f5]"
+                  >
+                    Send another message
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative bg-[#0d1117] overflow-hidden">
+      <div class="h-1 bg-gradient-to-r from-[#54b9ff] via-[#ff8c42] to-[#54b9ff]"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
+          <div class="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
+            <a href="#hero" data-scroll class="inline-block mb-6">
+              <div class="flex items-center gap-2">
+                <div class="relative w-10 h-10">
+                  <svg viewBox="0 0 100 100" class="w-full h-full">
+                    <path d="M25 45 Q35 25 50 25 Q65 25 75 45" fill="none" stroke="#54b9ff" strokeWidth="6" strokeLinecap="round" />
+                    <path d="M20 35 Q35 10 50 10 Q65 10 80 35" fill="none" stroke="#54b9ff" strokeWidth="6" strokeLinecap="round" />
+                    <circle cx="50" cy="65" r="22" fill="none" stroke="#54b9ff" strokeWidth="6" />
+                    <circle cx="50" cy="65" r="6" fill="#ffffff" />
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xl font-bold text-white tracking-tight">ADVARNA</span>
+                  <span class="text-[10px] tracking-widest uppercase text-[#54b9ff]">IoT Solutions</span>
+                </div>
+              </div>
+            </a>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">
+              Wireless measurement solutions dedicated to structural and geotechnical monitoring in civil engineering
+              and industry.
+            </p>
+
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-gray-400 transition-all duration-300 hover:bg-[#54b9ff]/20 hover:text-[#54b9ff]"
+                aria-label="LinkedIn"
+              >
+                <span data-lucide="linkedin" class="w-5 h-5"></span>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-gray-400 transition-all duration-300 hover:bg-[#54b9ff]/20 hover:text-[#54b9ff]"
+                aria-label="Twitter"
+              >
+                <span data-lucide="twitter" class="w-5 h-5"></span>
+              </a>
+              <a
+                href="mailto:contact@advarna.fr"
+                class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-gray-400 transition-all duration-300 hover:bg-[#54b9ff]/20 hover:text-[#54b9ff]"
+                aria-label="Email"
+              >
+                <span data-lucide="mail" class="w-5 h-5"></span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-4">Products</h4>
+            <ul class="space-y-3" id="footer-products"></ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-4">Company</h4>
+            <ul class="space-y-3" id="footer-company"></ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-4">Resources</h4>
+            <ul class="space-y-3" id="footer-resources"></ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-4">Legal</h4>
+            <ul class="space-y-3" id="footer-legal"></ul>
+          </div>
+        </div>
+
+        <div class="mt-16 pt-8 border-t border-white/10">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 text-sm">© <span id="footer-year"></span> ADVARNA. All rights reserved.</p>
+            <p class="text-gray-600 text-xs">Designed with precision for structural monitoring</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="quick-view-modal" class="fixed inset-0 z-[60] hidden">
+      <div class="absolute inset-0 bg-black/60" data-modal-close></div>
+      <div class="relative mx-auto mt-20 max-w-3xl px-4">
+        <div class="bg-white rounded-2xl p-6 shadow-2xl max-h-[85vh] overflow-y-auto">
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="text-2xl font-bold text-[#2c3e50]" id="modal-title"></h3>
+            <button type="button" data-modal-close class="p-2 rounded-full hover:bg-gray-100">
+              <span data-lucide="x" class="w-5 h-5 text-gray-500"></span>
+            </button>
+          </div>
+          <div class="mt-4" id="modal-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

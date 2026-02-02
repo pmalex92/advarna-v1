@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADVARNA - Product</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body class="bg-white text-[#2c3e50]">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="./index.html" class="flex items-center gap-2 group">
+            <div class="relative w-8 h-8">
+              <svg viewBox="0 0 100 100" class="w-full h-full">
+                <path d="M25 45 Q35 25 50 25 Q65 25 75 45" fill="none" stroke="#54b9ff" strokeWidth="6" strokeLinecap="round" />
+                <path d="M20 35 Q35 10 50 10 Q65 10 80 35" fill="none" stroke="#54b9ff" strokeWidth="6" strokeLinecap="round" />
+                <circle cx="50" cy="65" r="22" fill="none" stroke="#54b9ff" strokeWidth="6" />
+                <circle cx="50" cy="65" r="6" fill="#2c3e50" />
+              </svg>
+            </div>
+            <span class="text-lg font-bold text-[#2c3e50]">ADVARNA</span>
+          </a>
+          <a href="./index.html#products" class="flex items-center gap-2 text-[#2c3e50] hover:text-[#54b9ff] transition-colors">
+            <span data-lucide="arrow-left" class="w-4 h-4"></span>
+            Back to Products
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="pt-24 pb-16 bg-gradient-to-br from-[#2c3e50] via-[#1a252f] to-[#0d1117]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div>
+          <div class="flex items-center gap-2 text-white/60 text-sm mb-6">
+            <a href="./index.html" class="hover:text-[#54b9ff] transition-colors">Home</a>
+            <span data-lucide="chevron-right" class="w-4 h-4"></span>
+            <a href="./index.html#products" class="hover:text-[#54b9ff] transition-colors">Products</a>
+            <span data-lucide="chevron-right" class="w-4 h-4"></span>
+            <span class="text-white" id="breadcrumb-product"></span>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span class="inline-block px-4 py-1 bg-[#54b9ff]/20 text-[#54b9ff] text-sm font-semibold rounded-full mb-4" id="product-category"></span>
+              <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4" id="product-name"></h1>
+              <p class="text-xl text-[#54b9ff] mb-6" id="product-subtitle"></p>
+              <p class="text-white/70 text-lg leading-relaxed mb-8" id="product-description"></p>
+
+              <div class="flex flex-wrap gap-3 mb-8" id="product-tech"></div>
+
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href="#contact"
+                  class="flex items-center gap-2 px-6 py-3 bg-[#54b9ff] text-white font-semibold rounded-lg transition-all duration-300 hover:bg-[#3aa8f5]"
+                  data-scroll
+                >
+                  <span data-lucide="mail" class="w-5 h-5"></span>
+                  Request Quote
+                </a>
+                <button
+                  type="button"
+                  id="datasheet-trigger"
+                  class="flex items-center gap-2 px-6 py-3 bg-white/10 text-white font-semibold rounded-lg border border-white/20 transition-all duration-300 hover:bg-white/20"
+                >
+                  <span data-lucide="file-text" class="w-5 h-5"></span>
+                  Download Datasheet
+                </button>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-r from-[#54b9ff]/20 to-[#ff8c42]/10 rounded-3xl blur-3xl"></div>
+              <img src="" alt="" id="product-hero-image" class="relative w-full rounded-2xl shadow-2xl shadow-black/50" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#f8fafc]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="w-full">
+          <div class="w-full justify-start bg-white p-1 rounded-xl mb-8 flex-wrap h-auto gap-2 flex" id="tab-list"></div>
+
+          <div id="tab-content"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 bg-[#2c3e50]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="quick-stats"></div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-[#2c3e50] mb-8">Related Products</h2>
+        <div class="grid md:grid-cols-3 gap-6" id="related-products"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-gradient-to-br from-[#2c3e50] via-[#1a252f] to-[#0d1117]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4" id="contact-title"></h2>
+        <p class="text-white/70 mb-8">
+          Contact our team for a personalized quote and technical consultation.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="mailto:contact@advarna.fr"
+            class="flex items-center gap-2 px-8 py-4 bg-[#54b9ff] text-white font-semibold rounded-lg transition-all duration-300 hover:bg-[#3aa8f5]"
+          >
+            <span data-lucide="mail" class="w-5 h-5"></span>
+            Email Us
+          </a>
+          <a
+            href="tel:+33123456789"
+            class="flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 transition-all duration-300 hover:bg-white/20"
+          >
+            <span data-lucide="phone" class="w-5 h-5"></span>
+            Call Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#0d1117] py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8">
+              <svg viewBox="0 0 100 100" class="w-full h-full">
+                <path d="M25 45 Q35 25 50 25 Q65 25 75 45" fill="none" stroke="#54b9ff" strokeWidth="6" strokeLinecap="round" />
+                <path d="M20 35 Q35 10 50 10 Q65 10 80 35" fill="none" stroke="#54b9ff" strokeWidth="6" strokeLinecap="round" />
+                <circle cx="50" cy="65" r="22" fill="none" stroke="#54b9ff" strokeWidth="6" />
+                <circle cx="50" cy="65" r="6" fill="#ffffff" />
+              </svg>
+            </div>
+            <span class="text-white font-bold">ADVARNA</span>
+          </div>
+          <p class="text-gray-500 text-sm">© <span id="footer-year"></span> ADVARNA. All rights reserved.</p>
+          <a href="./index.html" class="text-[#54b9ff] hover:underline text-sm">Back to Home</a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="datasheet-modal" class="fixed inset-0 z-[60] hidden">
+      <div class="absolute inset-0 bg-black/60" data-modal-close></div>
+      <div class="relative mx-auto mt-20 max-w-lg px-4">
+        <div class="bg-white rounded-2xl p-6 shadow-2xl">
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="text-xl font-bold text-[#2c3e50]">Download Datasheet</h3>
+            <button type="button" data-modal-close class="p-2 rounded-full hover:bg-gray-100">
+              <span data-lucide="x" class="w-5 h-5 text-gray-500"></span>
+            </button>
+          </div>
+          <p class="text-gray-600 mt-4" id="datasheet-message"></p>
+          <div class="mt-6 text-right">
+            <button type="button" data-modal-close class="px-4 py-2 bg-[#54b9ff] text-white rounded-lg">
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./scripts/product.js"></script>
+  </body>
+</html>
